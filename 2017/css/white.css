@@ -1,0 +1,94 @@
+body {
+    background-color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: smaller;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    animation-name: intro;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+
+h1 {
+    font-weight: bolder;
+    font-size: inherit;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#logo {
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    background-image: url("../img/dsonyy-slider.gif");
+    margin-block-end: 1em;
+    margin-block-start: 1em;
+    image-rendering: pixelated;
+    box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.5);
+}
+
+#logo:hover {
+    cursor: pointer;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+footer {
+    font-size: x-small;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; 
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+      -webkit-user-select: none;
+       -khtml-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    animation-name: hover;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes intro {
+    from {
+        opacity: 0.0;
+    }
+    to {
+        opacity: 1.0;
+    }
+}
+
+@keyframes hover {
+    0% { color: black; }
+    20% { color: red; }
+    40% { color: green; }
+    60% { color: darkcyan; }
+    80% { color: blue; }
+    100% { color: purple; }
+    
+}
