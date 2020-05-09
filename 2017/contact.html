@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" type="text/css" href="css/white.css">
+     <link rel="stylesheet" type="text/css" href="css/contact.css">
+     <title>2017 | gallery</title>
+</head>
+<body>
+     <div id="container" class="noselect">
+          <h1 id="title">contact</h1>
+          <p><a href="index.html"><--</a></p>
+          <div id="logo-contact"></div>
+          <p>* * *</p>
+          <p><a onclick="showEmail(this); return false">Click here to show my email.</a></p>
+          <p>Or use the following form:</p>
+          <form name="contact" onsubmit="validateForm(); return false">
+               <p><input id="contact-name" name="name" type="text" placeholder="Your name" onclick="clearError(this)"></p>
+               <p><input id="contact-email" name="email" type="text" placeholder="Your email" onclick="clearError(this)"></p>
+               <p><textarea rows="16" id="contact" name="message" type="text" placeholder="( ͡° ͜ʖ ͡°)" onclick="clearError(this)"></textarea></p>
+               <div id="error"></div>
+               <p><button type="submit">Submit</button></p>
+          </form>
+          <p>* * *</p>
+          <footer>copyright &copy 2017-2020 dsonyy</footer>
+     </div>
+     <script src="js/contact.js"></script>
+</body>
+</html>

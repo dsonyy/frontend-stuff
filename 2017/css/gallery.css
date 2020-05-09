@@ -1,3 +1,19 @@
+#slideshow {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.9);
+    background-image: url("../img/gallery/1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: none;
+}
+
+#offset {
+    height: 15vh;
+}
 
 #logo-gallery {
     width: 50px;
