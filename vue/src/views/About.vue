@@ -1,15 +1,22 @@
 <template>
   <div class="about">
-    <Header />
+  It is an exercise application created by <strong>dsonyy</strong><br>based on <a href="https://www.youtube.com/watch?v=Wy9q22isx3U">Traversy Media crash course</a> for Vue.js basics.
   </div>
 </template>
 
-<script>
-import Header from "../components/layout/Header"
 
-export default {
-  components: {
-    Header
+<style scoped>
+  .about {
+    text-align: center;
+    padding: 20px;
   }
-}
-</script>
+  
+  .about a {
+    text-decoration: none;
+    color: blue;
+  }
+
+  .about a:hover {
+    color: grey;
+  }
+</style>

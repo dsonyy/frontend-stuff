@@ -1,14 +1,8 @@
 <template>
     <div class="todo-item" v-bind:class="{'completed':todoItem.completed}">
-        <div class="status"><input type="checkbox" v-on:change="markComplete"/></div>
+        <div class="status"><input type="checkbox" v-model="todoItem.completed"/></div>
         <div class="title">{{todoItem.title}}</div>
         <div class="delete" v-on:click="$emit('delete-todo-item', todoItem.id)">[x]</div>
-
-        <!-- <p class="todo-item" v-bind:class="{'completed':todoItem.completed}">
-            <input type="checkbox" v-on:change="markComplete">
-            {{todoItem.title}}
-            <button v-on:click="$emit('delete-todo-item', todoItem.id)" class="delete">Delete</button>
-        </p> -->
     </div>
 </template>
 
@@ -16,11 +10,6 @@
 export default {
     name: "TodoItem",
     props: ["todoItem"],
-    methods: {
-        markComplete() {
-            this.todoItem.completed = !this.todoItem.completed;
-        }
-    }
 }
 </script>
 
