@@ -5,7 +5,7 @@
 
 <script>
 export default {
-    name: "rainbow",
+    name: "Rainbow",
 }
 </script>
 
