@@ -40,6 +40,15 @@ export default {
     .container {
         background-image: url("../assets/svg/1.svg");
         background-repeat: no-repeat;
-        background-position: 80% -20%;
+        background-position: 100%;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .container {
+            color: red;
+        }
+        .image {
+            display: none;
+        }
     }
 </style>

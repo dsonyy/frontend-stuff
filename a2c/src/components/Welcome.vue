@@ -20,7 +20,7 @@ export default {
     .welcome {
         position: relative;
         background-color: #6227b5;
-        width: 100%;
+        width: max(100vw, 300px);
         height: calc(100vh - 2px);
         color: white;
     }
@@ -36,7 +36,7 @@ export default {
     }
 
     .date {
-        margin-top:  15px;
+        margin-top: 1em;
         font-style: italic;
     }
 </style>

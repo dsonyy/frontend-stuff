@@ -11,6 +11,7 @@
 <style>
 	* {
 		margin: 0;
+        padding: 0;
 	}
 
 	body {
@@ -24,15 +25,15 @@
     }
 
 	h1 {
-		font-size: 78px;
+		font-size: min(78px, 10vw);
 		font-weight: 800;
 		line-height: 100%;
 		user-select: none;
-		margin-bottom: 35px;
+		margin-bottom: 1rem;
 	}
 
 	h2 {
-		font-size: 64px;
+		font-size: min(64px, 8vw);
 		font-weight: 800;
 		line-height: 100%;
 		user-select: none;
@@ -50,8 +51,9 @@
 		position: relative;
 		top: 50%;
 		transform: translateY(-50%);
-		font-size: 15px;
+		font-size: min(15px, 3vw);
 		padding-left: 15%;
+        padding-right: 15%;
 	}
 
 	.content-right {
@@ -65,11 +67,11 @@
 	}
 
     .description {
-        width: 450px;
+        max-width: min(100%, 480px);
     }
 
     .button-action {
-        margin-top: 35px;
+        margin-top: 1.5em;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -78,7 +80,7 @@
         box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
         border-radius: 24px;
         height: 48px;
-        width: 142px;
+        width: min(142px, 30vw);
         font-weight: 600;
         user-select: none;
         cursor: pointer;
