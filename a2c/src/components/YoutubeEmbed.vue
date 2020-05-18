@@ -21,9 +21,9 @@ export default {
     },
     methods: {
         onResize() {
-            if (window.innerWidth > 800) this.videoWidth = window.innerWidth * 0.35;
-            else this.videoWidth = window.innerWidth * 0.8;
-                this.videoHeight = this.videoWidth * 9 / 16;   
+            if (window.innerWidth > 800) this.videoWidth = document.body.clientWidth * 0.35;
+            else this.videoWidth = document.body.clientWidth;
+            this.videoHeight = this.videoWidth * 9 / 16;   
         }
     },
     created() {
@@ -53,6 +53,12 @@ export default {
         section {
             flex-direction: column-reverse;
             background-image: none;
+        }
+
+        .left {
+            padding-left: 0;
+            padding-right: 0;
+            width: 100%;
         }
     }
 </style>
