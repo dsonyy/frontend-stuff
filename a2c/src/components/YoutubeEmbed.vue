@@ -1,35 +1,58 @@
 <template>
-    <div class="container">
-        <div class="video">
-            <iframe width="640" height="360" v-bind:src="video" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <section>
+        <div class="left">
+            <div v-bind:videoWidth="videoWidth" v-bind:videoHeight="videoHeight" class="video">
+                <iframe :width="videoWidth" :height="videoHeight" v-bind:src="video" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
         </div>
-        <div class="content-right">
+        <div class="right">
             <h2>{{ title }}</h2>
             <div class="description"><slot></slot></div>
         </div>
-    </div>
+    </section>
 </template>
 
 <script>
 export default {
     name: "YoutubeEmbed",
     props: ["video", "title"],
+    data() {
+        return {videoWidth: 100, videoHeight: 100};
+    },
+    methods: {
+        onResize() {
+            if (window.innerWidth > 800) this.videoWidth = window.innerWidth * 0.35;
+            else this.videoWidth = window.innerWidth * 0.8;
+                this.videoHeight = this.videoWidth * 9 / 16;   
+        }
+    },
+    created() {
+        window.addEventListener("resize", this.onResize);
+        this.onResize();
+    },
+    destroyed() {
+        window.removeEventListener("resize", this.onResize);
+    }
 }
 </script>
 
 <style scoped>
-    .video {
-		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
-        padding-left: 15%;
-        background-size: cover;
-        background-position: left;
-    }
-
     .container {
         background-image: url("../assets/svg/1.svg");
         background-repeat: no-repeat;
         background-position: 10% 15%;
+    }
+
+    section {
+        background-image: url("../assets/svg/1.svg");
+        background-repeat: no-repeat;
+        background-position: 7% 20%;
+    }
+
+    @media only screen and (max-width: 800px) {
+        section {
+            flex-direction: column-reverse;
+            background-image: none;
+        }
     }
 </style>

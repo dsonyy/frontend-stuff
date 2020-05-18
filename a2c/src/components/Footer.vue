@@ -12,6 +12,7 @@ export default {
 
 <style scoped>
     footer{
+        margin-top: 6rem;
         background-color: #150629;
         height: 150px;
         color: white;

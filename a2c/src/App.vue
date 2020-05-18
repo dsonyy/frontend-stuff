@@ -20,10 +20,6 @@
 		font-weight: 400;
 	}
 
-    sup {
-        padding-left: 5px;
-    }
-
 	h1 {
 		font-size: min(78px, 10vw);
 		font-weight: 800;
@@ -37,37 +33,52 @@
 		font-weight: 800;
 		line-height: 100%;
 		user-select: none;
-		margin-bottom: 35px;
+		margin-bottom: 1rem;
 	}
 
-    .container {
-		position: relative;
-        width: 100%;
-        height: 60vh;
+    section {
+        width: max(100%, 300px);
+        min-height: max(60vh, 600px);
         color: #250b47;
+        display: flex;
+        align-items: center;
     }
 
-	.content-left {
-		position: relative;
-		top: 50%;
-		transform: translateY(-50%);
-		font-size: min(15px, 3vw);
-		padding-left: 15%;
-        padding-right: 15%;
-	}
+    .left {
+        flex: 1;
+        padding-left: 15%;
+    }
 
-	.content-right {
-		position: relative;
-		top: 50%;
-		transform: translateY(-50%);
-		font-size: 15px;
-		padding-right: 15%;
-		text-align: right;
-		float: right;
+	.right {
+        flex: 1;
+        padding-right: 10%;
+        text-align: right;
 	}
 
     .description {
         max-width: min(100%, 480px);
+    }
+
+    .right .description {
+        float: right;
+    }
+
+    @media only screen and (max-width: 800px) {
+        section { 
+            flex-direction: column; 
+        }
+        .left { 
+            padding-left: 10%;
+            padding-right: 10%;
+            width: 80%;
+            padding-top: 4rem;
+        }
+        .right { 
+            padding-left: 10%;
+            padding-right: 10%;
+            width: 80%;
+            padding-top: 4rem;
+        }
     }
 
     .button-action {

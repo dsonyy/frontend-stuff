@@ -1,11 +1,13 @@
 <template>
-    <div class="container">
-        <div class="image" :style="style"></div>
-        <div class="content-left">
+    <section>
+        <div class="left">
             <h2>{{ title }}</h2>
             <div class="description"><slot></slot></div>
         </div>
-    </div>
+        <div class="right">
+            <div class="image" :style="style"></div>
+        </div>
+    </section>
 </template>
 
 <script>
@@ -25,30 +27,39 @@ export default {
         font-weight: 600;
     }
 
-    .image {
-		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
-        right: 0;
-        background-size: cover;
-        background-position: left;
-        background-repeat: no-repeat;
-        width: 45vw;
-        height: 60%;
+    .right {
+        padding-right: 0;
     }
 
-    .container {
+    .image {
+        width: 100%;
+        height: 50vh;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 16% 100%);
+    }
+
+    section {
         background-image: url("../assets/svg/1.svg");
         background-repeat: no-repeat;
-        background-position: 100%;
+        background-position: 100% 50%;
     }
 
-    @media only screen and (max-width: 600px) {
-        .container {
-            color: red;
-        }
+    @media only screen and (max-width: 800px) {
         .image {
-            display: none;
+            clip-path: none;
+            width: 100%;
+        }
+
+        .right {
+            padding-left: 0;
+            padding-right: 0;
+            width: 100%;
+        }
+
+        section {
+            background-image: none;
         }
     }
 </style>
