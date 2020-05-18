@@ -21,7 +21,6 @@ function closeGame() {
 }
 
 function updateGame(t, g) {
-     console.log(g.aliens);
      if (t >= g.lastUpdate + 10) {
           g.lastUpdate = t;
 
