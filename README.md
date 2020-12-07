@@ -1,6 +1,9 @@
-# Frontend learning
-Personal experiments and stuff for learning frontend technologies.
+# Frontend stuff
+Personal experiments and stuff related to frontend technologies.
 
-- [**"2017" Visual artist portfolio**](https://szymonbednorz.com/2017/) - HTML, CSS, vanilla JavaScript
-- **"vue" Todo List** - [Vue.js Crash Course](https://www.youtube.com/watch?v=Wy9q22isx3U); Vue.js, axios, JSONPlaceholder
-- **"a2c" Conference website** - Vue.js (Work in progress)
+|Name|Technologies|Notes|
+|-|-|-|
+|Portfolio|HTML, CSS, vanilla JavaScript|[Link](https://szymonbednorz.com/2017/)|
+|Vue.js Tutorial|Vue.js, axios, JSONPlaceholder|[Tutorial link](https://www.youtube.com/watch?v=Wy9q22isx3U)|
+|Awesome Conference |Vue.js|Abandoned|
+|Ultra simple business card | HTML, CSS||
